@@ -161,4 +161,4 @@ cython_debug/
 
 # virtual environment
 py3115
-secrets.py
+mysecret.py
