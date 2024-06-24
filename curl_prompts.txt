@@ -1,0 +1,4 @@
+{
+  "name": "mario",
+  "modelfile": "FROM llama3\nSYSTEM You are a pirate."
+}

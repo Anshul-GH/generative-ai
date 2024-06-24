@@ -1,0 +1,31 @@
+Calling API using curl_prompt file:
+curl http://localhost:11434/api/chat -d @curl_prompts.txt
+# Prompt Sample:
+{
+  "model": "phi3",
+  "messages": [
+    { "role": "user", "content": "who are you?" }
+  ],
+  "raw": true,
+  "stream": false
+}
+
+Creating a new model using curl:
+curl http://localhost:11434/api/create -d @curl_prompts.txt
+# Prompt Sample:
+{
+  "name": "mario",
+  "modelfile": "FROM llama3\nSYSTEM You are a pirate."
+}
+
+
+# Running Ollama Docker app
+docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v ollama-webui:/app/backend/data --name ollama-webui --restart always ghcr.io/ollama-webui/ollama-webui:main
+
+Docker Web App URL: http://127.0.0.1:3000
+
+# Using ngrock
+"C:\Users\Anshul\Downloads\ngrok.exe"
+
+Onetime: ngrok config add-authtoken 2iIOrIXujDkno2yLXSTkwj9N6fN_4iQwVFF7we4Dif1u5v82s
+Invoking Ngrock: ngrok http http://localhost:3000
