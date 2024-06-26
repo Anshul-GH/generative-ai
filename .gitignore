@@ -162,3 +162,5 @@ cython_debug/
 # virtual environment
 py3115
 mysecret.py
+embeddings/
+ollama/project_rag.txt
